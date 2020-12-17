@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Formats de livre -->
+    <string-array name="formats_livre">
+        <item>Papier</item>
+        <item>Audio</item>
+        <item>E-book</item>
+    </string-array>
+
+
+    <!-- Liste de collections par défaut -->
+    <string-array name="liste_collections">
+        <item>Classiques</item>
+        <item>Roman</item>
+        <item>BD</item>
+        <item>One Piece</item>
+        <item>Naruto</item>
+        <item>Détective Conan</item>
+        <item>Mangas</item>
+    </string-array>
+
+    
+    <!-- Listes de partage par défaut -->
+    <string-array name="liste_partage">
+        <item>Mes classiques préférés</item>
+        <item>Enquêtes</item>
+        <item>Lifestyle</item>
+        <item>Héroïque fantaisie</item>
+    </string-array>
+
+</resources>

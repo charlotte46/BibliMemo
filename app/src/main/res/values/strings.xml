@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">BibliMemo</string>
+
+    <!-- Navigation drawer header -->
+    <string name="nav_header_title">Bibli Mémo</string>
+    <string name="nav_header_desc">Logo bibli mémo</string>
+    <string name="img_desc_logo_appli">Logo de l\'application Bibli mémo</string>
+    <string name="img_desc_favoris">Icône indiquant le statut favoris de l\'ouvrage</string>
+
+    <!-- Navigation drawer groups -->
+    <string name="menu_gr_listes">Listes</string>
+    <string name="menu_gr_communiquer">Communiquer</string>
+
+    <!-- Labels menus navigation -->
+    <string name="menu_bibliotheque">Ma bibliothèque</string>
+    <string name="menu_recherche">Recherche</string>
+    <string name="menu_favoris">Favoris</string>
+    <string name="menu_partage">Partage</string>
+    <string name="menu_wishlist">Wishlist</string>
+    <string name="menu_imprimer">Imprimer</string>
+    <string name="menu_exporter">Exporter</string>
+    <string name="menu_importer">Importer</string>
+    <string name="menu_reglages">Réglages</string>
+
+    <!-- Messages temporaires de navigation -->
+    <string name="msg_wishlist">Wishlist non encore implémentée.</string>
+    <string name="msg_favoris">Liste des favoris non encore implémentée.</string>
+    <string name="msg_partage">Liste de partage non encore implémentée.</string>
+    <string name="msg_recherche">Recherche d\'ouvrage non encore implémentée.</string>
+    <string name="msg_imprimer">Fonctionnalité imprimer non encore implémentée.</string>
+    <string name="msg_import">Fonctionnalité import non encore implémentée.</string>
+    <string name="msg_export">Fonctionnalité export non encore implémentée.</string>
+    <string name="msg_reglages">Réglages non encore implémentés.</string>
+
+
+    <!-- Etat lecture -->
+    <string name="toggle_lu">Lu</string>
+    <string name="toggle_non_lu">Non lu</string>
+
+
+    <!-- Labels détails ouvrage -->
+    <string name="lb_num_tome">N°</string>
+    <string name="lb_collection">Collec</string>
+    <string name="lb_format">Format</string>
+    <string name="lb_quantite">Qté</string>
+
+
+    <!-- Boites de dialogue -->
+    <string name="dialog_collection_titre">Collections</string>
+    <string name="dialog_partage_titre">Listes de partage</string>
+    <string name="dialog_formats_titre">Formats</string>
+    <string name="dialog_quantite_titre">Quantité</string>
+
+
+    <!-- Hints -->
+    <string name="hint_titre">Titre</string>
+    <string name="hint_auteur">Auteur</string>
+    <string name="hint_tome">Numéro de tome</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_collection">Collection</string>
+    <string name="hint_partage">Listes de partage</string>
+    <string name="hint_format">Format</string>
+    <string name="hint_quantite">Quantité</string>
+
+
+    <!-- Boutons -->
+    <string name="btn_ok">OK</string>
+    <string name="btn_annuler">Annuler</string>
+
+
+    <!-- Content description : détails de l'ouvrage -->
+    <string name="img_desc_miniature">Miniature de l\'ouvrage</string>
+    <string name="img_desc_type_ouvrage">Type de l\'ouvrage</string>
+    <string name="img_desc_description_ouvrage">Description de l\'ouvrage</string>
+    <string name="img_desc_auteur_ouvrage">Auteur de l\'ouvrage</string>
+    <string name="img_desc_partage_ouvrage">Listes de partage de l\'ouvrage</string>
+
+
+    <!-- Messages temporaires : à supprimer -->
+    <string name="tempo_suppression_ouvrage">Suppression de l\'ouvrage non implémentée.</string>
+    <string name="tempo_enregistrer_ouvrage">L\'ouvrage n\'est pas réellement enregistré.</string>
+</resources>

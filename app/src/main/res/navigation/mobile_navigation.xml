@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/bibliothequeFragment">
+
+    <fragment
+        android:id="@+id/bibliothequeFragment"
+        android:name="com.example.biblimemo.ui.bibliotheque.BibliothequeFragment"
+        android:label="@string/menu_bibliotheque"
+        tools:layout="@layout/fragment_bibliotheque" />
+    <fragment
+        android:id="@+id/wishlistFragment"
+        android:name="com.example.biblimemo.ui.listes.WishlistFragment"
+        android:label="@string/menu_wishlist"
+        tools:layout="@layout/fragment_wishlist" />
+    <fragment
+        android:id="@+id/partageFragment"
+        android:name="com.example.biblimemo.ui.listes.PartageFragment"
+        android:label="@string/menu_partage"
+        tools:layout="@layout/fragment_partage" />
+    <fragment
+        android:id="@+id/favorisFragment"
+        android:name="com.example.biblimemo.ui.listes.FavorisFragment"
+        android:label="@string/menu_favoris"
+        tools:layout="@layout/fragment_favoris" />
+    <fragment
+        android:id="@+id/rechercheFragment"
+        android:name="com.example.biblimemo.ui.bibliotheque.RechercheFragment"
+        android:label="@string/menu_recherche"
+        tools:layout="@layout/fragment_recherche" />
+    <fragment
+        android:id="@+id/exporterFragment"
+        android:name="com.example.biblimemo.ui.communication.ExporterFragment"
+        android:label="@string/menu_exporter"
+        tools:layout="@layout/fragment_exporter" />
+    <fragment
+        android:id="@+id/importerFragment"
+        android:name="com.example.biblimemo.ui.communication.ImporterFragment"
+        android:label="@string/menu_importer"
+        tools:layout="@layout/fragment_importer" />
+    <fragment
+        android:id="@+id/imprimerFragment"
+        android:name="com.example.biblimemo.ui.communication.ImprimerFragment"
+        android:label="@string/menu_imprimer"
+        tools:layout="@layout/fragment_imprimer" />
+    <fragment
+        android:id="@+id/reglagesFragment"
+        android:name="com.example.biblimemo.ui.ReglagesFragment"
+        android:label="@string/menu_reglages"
+        tools:layout="@layout/fragment_reglages" />
+</navigation>

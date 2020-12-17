@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.OuvrageDetailsActivity">
+
+
+    <ImageView
+        android:id="@+id/ouvrage_details_miniature"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="#59DADADA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitCenter"
+        android:onClick="choisirPhoto"
+        android:clickable="false"
+        android:contentDescription="@string/img_desc_miniature"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ouvrage_details_favoris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:clickable="false"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/ouvrage_details_miniature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ouvrage_details_miniature"
+        app:srcCompat="@drawable/ic_favoris"
+        android:onClick="toggleFavoris"
+        android:contentDescription="@string/img_desc_favoris"/>
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:stretchColumns="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ouvrage_details_miniature">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1"
+            android:background="@android:color/white">
+
+            <!-- Titre de l'ouvrage -->
+            <TableRow
+                android:layout_marginTop="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:background="@drawable/view_top_bottom_border">
+
+                <ImageView
+                    android:id="@+id/icon_type_ouvrage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_type_book"
+                    android:contentDescription="@string/img_desc_type_ouvrage"/>
+
+                <EditText
+                    android:id="@+id/ouvrage_details_titre"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:inputType="textMultiLine"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:importantForAutofill="no"
+                    android:hint="@string/hint_titre"/>
+            </TableRow>
+
+
+            <!-- Auteur de l'ouvrage -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:background="@drawable/view_top_bottom_border">
+
+                <ImageView
+                    android:id="@+id/icon_auteur"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    app:srcCompat="@drawable/ic_person"
+                    android:contentDescription="@string/img_desc_auteur_ouvrage"/>
+
+                <EditText
+                    android:id="@+id/ouvrage_details_auteur"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:importantForAutofill="no"
+                    android:hint="@string/hint_auteur"/>
+            </TableRow>
+
+
+
+            <!-- Numéro de tome -->
+            <TableRow
+                android:id="@+id/row_tome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:background="@drawable/view_top_bottom_border">
+
+                <TextView
+                    android:id="@+id/icon_tome"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center"
+                    android:text="@string/lb_num_tome"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/ouvrage_details_tome"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:inputType="number"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:importantForAutofill="no"
+                    android:hint="@string/hint_tome"/>
+            </TableRow>
+
+
+            <!-- Description de l'ouvrage -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:background="@drawable/view_top_bottom_border">
+
+                <ImageView
+                    android:id="@+id/icon_description"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_description"
+                    android:contentDescription="@string/img_desc_description_ouvrage"/>
+
+                <EditText
+                    android:id="@+id/ouvrage_details_description"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:inputType="textMultiLine"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:importantForAutofill="no"
+                    android:hint="@string/hint_description"/>
+            </TableRow>
+
+
+            <!-- Format de l'ouvrage -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:background="@drawable/view_top_bottom_border">
+
+                <TextView
+                    android:id="@+id/icon_format"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center"
+                    android:text="@string/lb_format"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ouvrage_details_format"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:layout_marginEnd="8dp"
+                    android:hint="@string/hint_format"
+                    android:textColor="@android:color/black"
+                    android:enabled="false"
+                    android:onClick="selectionnerFormat">
+
+                </TextView>
+            </TableRow>
+
+
+            <!-- Collection -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:background="@drawable/view_top_bottom_border">
+
+                <TextView
+                    android:id="@+id/icon_collection"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center"
+                    android:text="@string/lb_collection"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ouvrage_details_collection"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@null"
+                    android:hint="@string/hint_collection"
+                    android:enabled="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:onClick="selectionnerCollection" />
+            </TableRow>
+
+            <!-- Quantité -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:background="@drawable/view_top_bottom_border">
+
+                <TextView
+                    android:id="@+id/icon_quantite"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center"
+                    android:text="@string/lb_quantite"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ouvrage_details_quantite"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="@android:color/black"
+                    android:hint="@string/hint_quantite"
+                    android:enabled="false"
+                    android:textSize="16sp"
+                    android:onClick="selectionnerQuantite"/>
+            </TableRow>
+
+            <!-- Etat de lecture de l'ouvrage -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:background="@drawable/view_top_bottom_border">
+
+                <Switch
+                    android:id="@+id/switch_lecture"
+                    android:enabled="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp" />
+
+                <TextView
+                    android:id="@+id/ouvrage_details_lecture"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+
+            </TableRow>
+
+
+
+            <!-- Listes de partage -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="64dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/icon_partage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_menu_partage"
+                    android:contentDescription="@string/img_desc_partage_ouvrage"/>
+
+                <TextView
+                    android:id="@+id/ouvrage_details_liste_partage"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="@string/hint_partage"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:onClick="selectionnerListesPartage"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <!-- Activer l'édition -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ouvrage_details_btn_editer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_edit"
+        android:onClick="activerEdition"/>
+
+    <!-- Edition activée -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ouvrage_details_btn_enregistrer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_check"
+        android:onClick="enregistrerEdition"/>
+
+    <!-- Suppression de l'ouvrage -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/ouvrage_details_btn_supprimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ouvrage_details_btn_enregistrer"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_delete"
+        android:onClick="supprimerOuvrage"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

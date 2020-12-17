@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/bibliothequeFragment"
+            android:icon="@drawable/ic_menu_bibliotheque"
+            android:title="@string/menu_bibliotheque" />
+    </group>
+
+    <item android:title="@string/menu_gr_listes">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/favorisFragment"
+                    android:icon="@drawable/ic_favoris"
+                    android:title="@string/menu_favoris" />
+                <item
+                    android:id="@+id/partageFragment"
+                    android:icon="@drawable/ic_menu_partage"
+                    android:title="@string/menu_partage" />
+                <item
+                    android:id="@+id/wishlistFragment"
+                    android:icon="@drawable/ic_menu_wish"
+                    android:title="@string/menu_wishlist" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/menu_gr_communiquer">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/imprimerFragment"
+                    android:icon="@drawable/ic_menu_imprimer"
+                    android:title="@string/menu_imprimer" />
+                <item
+                    android:id="@+id/exporterFragment"
+                    android:icon="@drawable/ic_menu_export"
+                    android:title="@string/menu_exporter" />
+                <item
+                    android:id="@+id/importerFragment"
+                    android:icon="@drawable/ic_menu_import"
+                    android:title="@string/menu_importer" />
+            </group>
+        </menu>
+
+    </item>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/reglagesFragment"
+            android:icon="@drawable/ic_menu_reglages"
+            android:title="@string/menu_reglages" />
+    </group>
+
+</menu>
